@@ -2,6 +2,8 @@
 
 A WinCUPL project enabling an ATF16V8B chip to emulate a 74LS47 seven segment display decoder IC with additional/new hex-output functionality.
 
+See [my website](https://www.andavno.com/?p=539) for a more in-depth description.
+
 ## Software
 
 Project files created under WinCUPL version 5.30.4
@@ -35,3 +37,4 @@ The "HEX_TO_7SEG_DECODER_COMMON_ANODE_V1.2.jed" file can be directly used to pro
 
 ![Rev0 Image 1](../COMMON_ANODE_v1.2/Images/IMG_2089s.jpg)
 
+See [my website](https://www.andavno.com/?p=539) for a guide on how to use WinCUPL to compile the project files and how to program the ATF16V8B.
