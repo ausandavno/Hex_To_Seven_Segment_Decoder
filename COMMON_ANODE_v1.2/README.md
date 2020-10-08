@@ -11,4 +11,7 @@ WinCUPL can be found on the [PLD Design Resources page](https://pages.github.com
 
 ## Hardware Emulation
 
-The ATF16V8B PLD is progammed to emulate the pin-out of the 74LS47 seven segment display decoder IC. This can only be a close approximation as the ATF16V8B is a 20 pin device and the 74LS47 is a 16 pin device. See comparison:
+The ATF16V8B PLD is progammed to emulate the pin-out of the 74LS47 seven segment display decoder IC. This can only be a close approximation as the ATF16V8B is a 20 pin device and the 74LS47 is a 16 pin device. 
+
+See comparison:
+![Rev0 Image 1](../COMMON_ANODE_v1.2/Images/74LS47_to_ATF16V8B_Pin_Assignment.PNG)
