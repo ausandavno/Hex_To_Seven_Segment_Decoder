@@ -6,6 +6,7 @@ A WinCUPL project enabling an ATF16V8B chip to emulate a 74LS47 seven segment di
 
 Project files created under WinCUPL version 5.30.4
 WinCUPL can be found on the [PLD Design Resources page](https://pages.github.com/) of the Microchip website as of 2020/10/8.
+
 [Direct link to WinCUPL installer](http://ww1.microchip.com/downloads/archive/awincupl.exe) that may or may not break in future. Microchip suggests serial number 60008009.
 
 ## Hardware Emulation
