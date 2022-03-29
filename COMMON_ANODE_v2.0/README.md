@@ -40,9 +40,9 @@ The "HEX_TO_7SEG_DECODER_COMMON_ANODE_V2.0.jed" file is the compiled output of t
 The "HEX_TO_7SEG_DECODER_COMMON_ANODE_V2.0.jed" file can be directly used to program an ATF16V8B PLD chip and achieve conversion of hexadecimal-range BCD inputs for display of hexadecimal characters on a Common Anode seven segment display. 
 
 Normal Function:
-![Rev0 Image 1](../COMMON_ANODE_v1.2/Images/IMG_6497s.jpg)
+![Rev0 Image 1](../COMMON_ANODE_v2.0/Images/IMG_6497s.jpg)
 
 With Blanking Input:
-![Rev0 Image 1](../COMMON_ANODE_v1.2/Images/IMG_6498s.jpg)
+![Rev0 Image 1](../COMMON_ANODE_v2.0/Images/IMG_6498s.jpg)
 
 See [my website](https://www.andavno.com/?p=672) for a guide on how to use WinCUPL to compile the project files and how to program the ATF16V8B.
