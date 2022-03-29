@@ -1,0 +1,69 @@
+%SIGNAL
+PIN  16 =  A 
+PIN  15 =  B 
+PIN  14 =  C 
+PIN  13 =  D 
+PIN  12 =  E 
+PIN  18 =  F 
+PIN  17 =  G 
+PIN   8 =  I0 
+PIN   2 =  I1 
+PIN   3 =  I2 
+PIN   7 =  I3 
+PIN   5 =  I4 
+%END
+
+%FIELD
+FIELD INPUT = I4,I3,I2,I1,I0
+FIELD OUTPUT = A,B,C,D,E,F,G
+%END
+
+%EQUATION
+A =>
+    !I4
+  # I0 & !I1 & I2 & I3 & I4
+  # I0 & !I1 & !I2 & !I3 & I4
+  # !I0 & !I1 & I2 & !I3 & I4
+  # I0 & I1 & !I2 & I3 & I4
+
+B =>
+    !I4
+  # !I0 & !I1 & I2 & I3 & I4
+  # I0 & !I1 & I2 & !I3 & I4
+  # !I0 & I1 & I2 & I4
+  # I0 & I1 & I3 & I4
+
+C =>
+    !I4
+  # I0 & I1 & I2 & I3 & I4
+  # !I0 & I1 & !I2 & !I3 & I4
+  # !I0 & I2 & I3 & I4
+
+D =>
+    !I4
+  # !I0 & I1 & !I2 & I3 & I4
+  # I0 & !I1 & !I2 & I4
+  # !I0 & !I1 & I2 & !I3 & I4
+  # I0 & I1 & I2 & I4
+
+E =>
+    !I4
+  # I0 & !I1 & !I2 & I3 & I4
+  # I0 & !I2 & !I3 & I4
+  # !I1 & I2 & !I3 & I4
+  # I0 & I1 & I2 & !I3 & I4
+
+F =>
+    !I4
+  # I0 & !I1 & I2 & I3 & I4
+  # I0 & !I2 & !I3 & I4
+  # !I0 & I1 & !I2 & !I3 & I4
+  # I0 & I1 & I2 & !I3 & I4
+
+G =>
+    !I4
+  # !I1 & !I2 & !I3 & I4
+  # !I0 & !I1 & I2 & I3 & I4
+  # I0 & I1 & I2 & !I3 & I4
+
+%END

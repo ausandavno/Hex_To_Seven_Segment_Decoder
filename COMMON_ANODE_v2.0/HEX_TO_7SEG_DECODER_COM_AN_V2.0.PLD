@@ -1,0 +1,77 @@
+Name     HEX_TO_7SEG_DECODER_COM_AN_v2.0 ;
+PartNo   ATF16V8B ;
+Date     28/03/2022 ;
+Revision 2.0 ;
+Designer Andavno ;
+Company  na ;
+Assembly na ;
+Location na ;
+Device   virtual ;
+
+/*
+HEX to 7-seg LED driver
+Target Device: ATF16V8B
+Designed as a "sort of" drop-in replacement to 74LS47 (SEE NOTE 1 BELOW).
+For use with Common Anode 7-seg displays.
+Use this file at your own risk. Error-free operation cannot be guaranteed. Warranty is neither present nor implied. 
+
+	              ----__---- 
+	N/C          | 1     20 | VCC
+	 I1 (BCD B)  | 2     19 | N/C
+	 I2 (BCD C)  | 3     18 | Segment F
+	    (LT)     | 4     17 | Segment G
+	 I4 (BI/RBO) | 5     16 | Segment A
+	    (RBI)    | 6     15 | Segment B
+	 I3 (BCD D)  | 7     14 | Segment C
+	 I0 (BCD A)  | 8     13 | Segment D
+	N/C          | 9     12 | Segment E
+	GND          | 10    11 | N/C
+	              ---------- 
+
+NOTE 1:
+74LS47 is a 16-pin device, but ATF16V8B is a 20-pin device.
+The pins of ATF16V8B are aligned to those of 74LS47, except pins 1,10,11 and 20 overhang both ends of the footprint of 74LS47.
+Pin 9 of ATF16V8B has an integral pull-up resistor, therefore it can be tied to ground (as it would be on the 74LS47 footprint), or left unconnected.
+Pin 19 of ATF16V8B has an integral pull-up resistor, therefore it can be tied to VCC (as it would be on the 74LS47 footprint), or left unconnected.
+The "BI" function of 74LS47 is implemented.
+The "LT" and "RBI" functions of 74LS47 are not implemented.
+*/
+
+/* *************** INPUT PINS *********************/
+PIN 8 = I0 ; /* BCD A (LSB)*/ 
+PIN 2 = I1 ; /* BCD B */ 
+PIN 3 = I2 ; /* BCD C */ 
+PIN 7 = I3 ; /* BCD D (MSB)*/
+PIN 5 = I4 ; /* BI */
+
+/* *************** OUTPUT PINS ******************** */
+PIN 16 = A;	/* Seven segment LED "A" */
+PIN 15 = B;	/* Seven segment LED "B" */
+PIN 14 = C;	/* Seven segment LED "C" */
+PIN 13 = D;	/* Seven segment LED "D" */
+PIN 12 = E;	/* Seven segment LED "E" */
+PIN 18 = F;	/* Seven segment LED "F" */
+PIN 17 = G;	/* Seven segment LED "G" */
+
+FIELD INPUT = [I4,I3,I2,I1,I0]; 	/* input array definition */
+FIELD OUTPUT = [A,B,C,D,E,F,G]; 	/* output array definition */
+TABLE INPUT => OUTPUT		/* output values inverted because Common Anode */
+{
+['h'0..'h'F] => 'b'1111111;	/* If Blanking Input active low, then display is blanked */
+'b'10000 => 'b'0000001;	/* Symbol "0" */
+'b'10001 => 'b'1001111;	/* Symbol "1" */
+'b'10010 => 'b'0010010;	/* Symbol "2" */
+'b'10011 => 'b'0000110;	/* Symbol "3" */
+'b'10100 => 'b'1001100;	/* Symbol "4" */
+'b'10101 => 'b'0100100;	/* Symbol "5" */
+'b'10110 => 'b'0100000;	/* Symbol "6" */
+'b'10111 => 'b'0001111;	/* Symbol "7" */
+'b'11000 => 'b'0000000;	/* Symbol "8" */
+'b'11001 => 'b'0001100;	/* Symbol "9" */
+'b'11010 => 'b'0001000;	/* Symbol "A" */
+'b'11011 => 'b'1100000;	/* Symbol "b" */
+'b'11100 => 'b'0110001;	/* Symbol "C" */
+'b'11101 => 'b'1000010;	/* Symbol "d" */
+'b'11110 => 'b'0110000;	/* Symbol "E" */
+'b'11111 => 'b'0111000;	/* Symbol "F" */
+}

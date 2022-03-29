@@ -1,0 +1,206 @@
+
+*******************************************************************************
+                         HEX_TO_7SEG_DECODER_COM_AN_v
+*******************************************************************************
+
+CUPL(WM)        5.0a Serial# 60008009
+Device          g16v8as  Library DLIB-h-40-2
+Created         Mon Mar 28 21:40:22 2022
+Name            HEX_TO_7SEG_DECODER_COM_AN_v2.0 
+Partno          ATF16V8B 
+Revision        2.0 
+Date            28/03/2022 
+Designer        Andavno 
+Company         na 
+Assembly        na 
+Location        na 
+
+===============================================================================
+                            Expanded Product Terms
+===============================================================================
+
+A =>
+    !I4
+  # I0 & !I1 & I2 & I3 & I4
+  # I0 & !I1 & !I2 & !I3 & I4
+  # !I0 & !I1 & I2 & !I3 & I4
+  # I0 & I1 & !I2 & I3 & I4
+
+B =>
+    !I4
+  # !I0 & !I1 & I2 & I3 & I4
+  # I0 & !I1 & I2 & !I3 & I4
+  # !I0 & I1 & I2 & I4
+  # I0 & I1 & I3 & I4
+
+C =>
+    !I4
+  # I0 & I1 & I2 & I3 & I4
+  # !I0 & I1 & !I2 & !I3 & I4
+  # !I0 & I2 & I3 & I4
+
+D =>
+    !I4
+  # !I0 & I1 & !I2 & I3 & I4
+  # I0 & !I1 & !I2 & I4
+  # !I0 & !I1 & I2 & !I3 & I4
+  # I0 & I1 & I2 & I4
+
+E =>
+    !I4
+  # I0 & !I1 & !I2 & I3 & I4
+  # I0 & !I2 & !I3 & I4
+  # !I1 & I2 & !I3 & I4
+  # I0 & I1 & I2 & !I3 & I4
+
+F =>
+    !I4
+  # I0 & !I1 & I2 & I3 & I4
+  # I0 & !I2 & !I3 & I4
+  # !I0 & I1 & !I2 & !I3 & I4
+  # I0 & I1 & I2 & !I3 & I4
+
+G =>
+    !I4
+  # !I1 & !I2 & !I3 & I4
+  # !I0 & !I1 & I2 & I3 & I4
+  # I0 & I1 & I2 & !I3 & I4
+
+INPUT =>
+    I4 , I3 , I2 , I1 , I0
+
+OUTPUT =>
+    A , B , C , D , E , F , G
+
+
+===============================================================================
+                                 Symbol Table
+===============================================================================
+
+Pin Variable                                    Pterms   Max     Min    
+Pol   Name              Ext     Pin     Type     Used   Pterms  Level   
+--- --------            ---     ---     ----    ------  ------  -----   
+
+    A                           16       V        5       8       1     
+    B                           15       V        5       8       1     
+    C                           14       V        4       8       1     
+    D                           13       V        5       8       1     
+    E                           12       V        5       8       1     
+    F                           18       V        5       8       1     
+    G                           17       V        4       8       1     
+    I0                          8        V        -       -       -     
+    I1                          2        V        -       -       -     
+    I2                          3        V        -       -       -     
+    I3                          7        V        -       -       -     
+    I4                          5        V        -       -       -     
+    INPUT                       0        F        -       -       -     
+    OUTPUT                      0        F        -       -       -     
+
+
+LEGEND    D : default variable         F : field      G : group
+          I : intermediate variable    N : node       M : extended node
+          U : undefined                V : variable   X : extended variable
+          T : function
+
+
+===============================================================================
+                                   Fuse Plot
+===============================================================================
+
+Syn   02192 - Ac0   02193 x 
+
+Pin #19  02048  Pol x  02120  Ac1 - 
+ 00000 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00032 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00064 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00096 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00128 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00160 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00192 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00224 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+Pin #18  02049  Pol -  02121  Ac1 x 
+ 00256 -------------x------------------ 
+ 00288 -x--x-------x-------x---x------- 
+ 00320 -----x------x--------x--x------- 
+ 00352 x----x------x--------x---x------ 
+ 00384 x---x-------x--------x--x------- 
+ 00416 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00448 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00480 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+Pin #17  02050  Pol -  02122  Ac1 x 
+ 00512 -------------x------------------ 
+ 00544 -x---x------x--------x---------- 
+ 00576 -x--x-------x-------x----x------ 
+ 00608 x---x-------x--------x--x------- 
+ 00640 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00672 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00704 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00736 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+Pin #16  02051  Pol -  02123  Ac1 x 
+ 00768 -------------x------------------ 
+ 00800 -x--x-------x-------x---x------- 
+ 00832 -x---x------x--------x--x------- 
+ 00864 -x--x-------x--------x---x------ 
+ 00896 x----x------x-------x---x------- 
+ 00928 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00960 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00992 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+Pin #15  02052  Pol -  02124  Ac1 x 
+ 01024 -------------x------------------ 
+ 01056 -x--x-------x-------x----x------ 
+ 01088 -x--x-------x--------x--x------- 
+ 01120 x---x-------x------------x------ 
+ 01152 x-----------x-------x---x------- 
+ 01184 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 01216 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 01248 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+Pin #14  02053  Pol -  02125  Ac1 x 
+ 01280 -------------x------------------ 
+ 01312 x---x-------x-------x---x------- 
+ 01344 x----x------x--------x---x------ 
+ 01376 ----x-------x-------x----x------ 
+ 01408 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 01440 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 01472 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 01504 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+Pin #13  02054  Pol -  02126  Ac1 x 
+ 01536 -------------x------------------ 
+ 01568 x----x------x-------x----x------ 
+ 01600 -x---x------x-----------x------- 
+ 01632 -x--x-------x--------x---x------ 
+ 01664 x---x-------x-----------x------- 
+ 01696 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 01728 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 01760 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+Pin #12  02055  Pol -  02127  Ac1 x 
+ 01792 -------------x------------------ 
+ 01824 -x---x------x-------x---x------- 
+ 01856 -----x------x--------x--x------- 
+ 01888 -x--x-------x--------x---------- 
+ 01920 x---x-------x--------x--x------- 
+ 01952 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 01984 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 02016 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+
+
+LEGEND    X : fuse not blown 
+          - : fuse blown 
+
+===============================================================================
+                                 Chip Diagram
+===============================================================================
+
+                               ______________
+                              |HEX_TO_7SEG_DE|
+                          x---|1           20|---x Vcc                      
+                       I1 x---|2           19|---x                          
+                       I2 x---|3           18|---x F                        
+                          x---|4           17|---x G                        
+                       I4 x---|5           16|---x A                        
+                          x---|6           15|---x B                        
+                       I3 x---|7           14|---x C                        
+                       I0 x---|8           13|---x D                        
+                          x---|9           12|---x E                        
+                      GND x---|10          11|---x                          
+                              |______________|
+
