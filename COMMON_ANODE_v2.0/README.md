@@ -1,6 +1,7 @@
 # HEX_TO_7SEG_DECODER_COMMON_ANODE_V2.0
 
 A WinCUPL project enabling an ATF16V8B chip to emulate a 74LS47 seven segment display decoder IC with additional/new hex-output functionality. 
+
 Version 2.0 implements the Blanking Input functionality of the 74LS47.
 
 See [my website](https://www.andavno.com/?p=672) for a description of v2.0 changes.
@@ -22,7 +23,9 @@ The ATF16V8B PLD is programmed to emulate the pin-out of the 74LS47 seven segmen
 ## Software Emulation
 
 The ATF16V8B is programmed to mimic the 74LS47 seven segment display decoder IC with expanded functionality in the form of an ability to display hexadecimal characters corresponding to BCD inputs in the hexadecimal range.
+
 This v2.0 code implements Blanking Input functionality. 
+
 The 74LS47 Ripple Blanking Input, Lamp Test Input, and Ripple Blanking Output are NOT implemented to keep code size down.
 
 The ATF16V8B is programmed to produce inverted outputs suitable for driving a Common Anode seven segment display (i.e. to mimic the 74LS47).
