@@ -1,6 +1,7 @@
 # HEX_TO_7SEG_DECODER_COMMON_ANODE_V2.0
 
-A WinCUPL project enabling an ATF16V8B chip to emulate a 74LS47 seven segment display decoder IC with additional/new hex-output functionality. Version 2.0 implements the Blanking Input functionality of the 74LS47.
+A WinCUPL project enabling an ATF16V8B chip to emulate a 74LS47 seven segment display decoder IC with additional/new hex-output functionality. 
+Version 2.0 implements the Blanking Input functionality of the 74LS47.
 
 See [my website](https://www.andavno.com/?p=672) for a description of v2.0 changes.
 
